@@ -5,16 +5,16 @@
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 700;
-    padding: 1em 0 0.5em 0;
+    padding: 1.3em 0 0.5em 0;
 }
-
+.carrossel__container {
+    display: flex;
+    /*margin: 0 10vw 3em 10vw;*/
+    padding: 5em;
+    align-items: center;
+}
 .swiper-slide img {
     width: 100%;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    display: none;
 }
 
 .swiper-pagination {
@@ -43,11 +43,15 @@
     border-radius: 10px;
     margin: 1em;
     padding: 1em;
+    width: 60%;
+    position: relative;
+    left: 4em;
 }
 
 .descrição__titulo {
     color: var(--laranja);
     font-weight: 700;
+    font-size: 27px;
 }
 
 .descrição__titulo-livro {
@@ -72,20 +76,47 @@
     font-weight: 700;
     text-decoration: none;
 }
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: var(--azul);
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+
+.descrição__texto {
+    font-size: 16px;
+}
+
+.descrição {
+    margin-right: 2em;
+} 
 
 @media screen and (min-width: 1024px) {
     .carrossel__titulo {
         font-size: 26px;
     }
-
+    .carrossel__container {
+        display: flex;       
+        align-items: center;
+    }
     .swiper-pagination {
         margin: 2em 0 3em 0;
     }
-
+    .descrição__titulo{
+        font-size: 27px;
+    }
     .swiper {
         width: 60%;
     }
-
+    .swiper {
+        width: 50em;
+    }
+    .swiper-slide{
+        padding: 10px;
+        /*mexa*/
+    }
     .swiper-button-prev,
     .swiper-button-next {
         display: block;
@@ -93,15 +124,18 @@
     }
 
     .card {
-        width: 40%;
+        padding: 24px;
+        width: 45%;
         margin: 2em auto;
     }
+
 }
 
-@media screen and (min-width: 1728px) {
+@media screen and (min-width: 1728px) {         /*VOCE TEM QUE MEXER NESSA PORCARIA DE TELA DE TABLET*/
     .carrossel__container {
         display: flex;
-        margin: 0 20vw 3em 20vw;
+        flex-direction: column;                  /* Alinhar conteúdo em coluna para dispositivos móveis */
+        padding: 5em;
         align-items: center;
     }
 
@@ -124,10 +158,53 @@
     .descrição {
         margin-right: 2em;
     }
-
     .card {
         width: 60%;
         margin-left: 3em;
     }
-
+}
+@media screen and (max-width: 767px) {
+    .carrossel__container {
+        padding: 1em;
+    }
+    .swiper {
+        width: 100%;
+    }
+    .carrossel__container {
+        display: flex;
+        flex-direction: column; /* Alinhar conteúdo em coluna para dispositivos móveis */
+        padding: 0em;
+        align-items: center;
+        margin-left: 13px;
+        padding-left: 10px;
+        width: 90%;
+    }
+    .card {
+        width: 100%;
+        margin: 1em 0;
+        left: 0;
+    }
+    .descrição__titulo {
+        font-size: 20px;
+    }
+    .descrição__titulo-livro {
+        font-size: 16px;
+    }
+    .descrição__texto {
+        font-size: 14px;
+    }
+    .descrição {
+        margin-right: 0;
+        flex-direction: column;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: none;
+    }
+    
+    .swiper {
+        width: 650px;
+        margin: 0;
+        margin-bottom: 24px;
+    }
 }
