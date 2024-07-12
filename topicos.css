@@ -1,12 +1,15 @@
 .tópicos {
     background: var(--azul-degrade);
     text-align: center;
-    padding: 1em 21em;
+    /*padding: 3em 30vw;*/
+    padding: 3em 25em;
+    width: 670px;
+}
+/*padding: 1em 21em;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 70px;*/
     /* Modificar o padding de 21em, e trocar a ordem dos componentes */
-} /* padding 1em 0, configuraçao original*/
-
+ /* padding 1em 0, configuraçao original*/
 .tópicos__titulo {
     color: var(--branco);
     font-weight: 300;
@@ -46,5 +49,30 @@
 @media screen and (min-width: 1728px) {
     .tópicos {
         padding: 3em 30vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .tópicos {
+        width: 28em;
+        padding: 3em 5em;
+        padding-left: 0.5em;
+        padding-right: 1em;
+    }
+    .tópicos__link{
+        padding: 1.6em;
+        font-size: 15px;
+    }.tópicos__item{
+        display: flex;
+        margin: 5.9px;
+        
+    }
+    .tópicos__lista {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tópicos__titulo{
+        font-size: 19px;
     }
 }
